@@ -5,7 +5,8 @@ import linaria from "@linaria/rollup";
 export default defineConfig({
     plugins: [
         linaria(),
-        react(), // comment out to make it run again :(
+        react({ jsxRuntime: 'classic' }), // comment out to make it run again :(
+        // remove the config object with jsxRuntime above to see the second error
     ],
     root: "./src"
 });
